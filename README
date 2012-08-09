@@ -1,0 +1,72 @@
+pdedit
+======
+
+What is it?
+-----------
+
+pdedit is a set of Bash scripts to edit pdf files.
+
+A common use case is to insert text or images into otherwise uneditable pdf
+files.
+To do this, it converts the pdf into a set of svg files and allows the user to
+edit each page in Inkscape before performing the reverse operation and
+converting back into a pdf.
+
+Requirements
+------------
+
+Bash - http://www.gnu.org/software/bash/
+pdftk - http://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/
+pdf2svg - http://www.cityinthesky.co.uk/pdf2svg.html
+Inkscape - http://inkscape.org/
+
+Installation
+------------
+
+Copy the pdedit-* scripts to the location of your choice.
+For example:
+>>> cp pdedit-* ~/bin
+
+Running
+-------
+
+Assuming the scripts are installed somewhere on your path and test.pdf is the
+pdf we want to edit:
+
+Break up the pdf into pages; for example, pg0001.pdf, pg0002.pdf
+>>> pdedit-break test.pdf
+
+Edit a page; for example, page 2.
+This converts the pdf to an svg and opens Inkscape.
+Once you have applied your edits, saved, and closed, pdedit will convert the
+svg back into a pdf.
+>>> pdedit-edit 2
+
+Join the pages into a single pdf again:
+>>> pdedit-join output.pdf
+
+Clean up the intermediate page files:
+>>> pdedit-clean
+
+Contributing
+------------
+
+Fork it on GitHub, hack away, and then send a pull request.
+
+See more at https://github.com/rosslagerwall/pdedit
+
+Licensing
+---------
+
+This program is free software: you can redistribute it and/or modify it under
+the terms of the GNU General Public License as published by the Free Software
+Foundation, either version 2 of the License, or (at your option) any later
+version.
+
+Please see the file called COPYING for more details.
+
+Latest Version
+--------------
+
+Details of the latest version can be found on the pedit project page at
+https://github.com/rosslagerwall/pdedit
