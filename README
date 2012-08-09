@@ -20,6 +20,12 @@ pdftk - http://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/
 pdf2svg - http://www.cityinthesky.co.uk/pdf2svg.html
 Inkscape - http://inkscape.org/
 
+pdedit has been tested on Fedora Linux 17 with:
+- Bash 4.2.37
+- pdftk 1.44
+- pdf2svg 0.2.1
+- Inkscape 0.48.2 r9819 (Apr 11 2012)
+
 Installation
 ------------
 
