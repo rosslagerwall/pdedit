@@ -48,6 +48,9 @@ Once you have applied your edits, saved, and closed, pdedit will convert the
 svg back into a pdf.
 >>> pdedit-edit 2
 
+The previous step can be run any number of times for each page that needs to be
+edited.
+
 Join the pages into a single pdf again:
 >>> pdedit-join output.pdf
 
