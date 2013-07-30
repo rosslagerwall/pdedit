@@ -21,7 +21,7 @@ else
     ARG="$1"
 fi
 
-NUM_PAGES=$(grep Num doc_data.txt | awk '{print $2}')
+NUM_PAGES=$(grep ^NumberOfPages doc_data.txt | awk '{print $2}')
 pdftk $(seq -f 'pg_%04g.pdf' 1 $NUM_PAGES) cat output out.pdf
 pdftk out.pdf output $ARG flatten
 rm out.pdf
